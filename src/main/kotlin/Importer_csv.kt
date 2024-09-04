@@ -3,7 +3,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory
 
 fun main() {
 
-    val file = Path("../../Downloads/Produktliste.xlsx").toFile()
+    val file = Path("../../Downloads/Produktliste.csv").toFile()
     val sheet = WorkbookFactory.create(file).getSheetAt(0)
     val lines = mutableListOf("code;name;unit;price;")
 
