@@ -1,5 +1,6 @@
 plugins {
-    kotlin("jvm") version "1.9.23"
+    val kotlinPluginVersion = "2.0.21"
+    kotlin("jvm") version kotlinPluginVersion
 }
 
 group = "de.rolf-rosenbaum"
@@ -17,5 +18,8 @@ dependencies {
 }
 
 kotlin {
-    jvmToolchain(21)
+    jvmToolchain {
+        this.languageVersion.set(JavaLanguageVersion.of("21"))
+        vendor.set(JvmVendorSpec.ADOPTIUM)
+    }
 }

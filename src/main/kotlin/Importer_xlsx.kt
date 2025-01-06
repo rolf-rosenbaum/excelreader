@@ -1,5 +1,4 @@
 import kotlin.io.path.Path
-import org.apache.poi.ss.usermodel.WorkbookFactory
 
 fun main() {
     val file = Path("../../Downloads/Produktliste.csv").toFile()

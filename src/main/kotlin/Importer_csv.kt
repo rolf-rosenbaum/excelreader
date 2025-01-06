@@ -3,7 +3,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory
 
 fun main() {
 
-    val file = Path("../../Downloads/Produktliste.csv").toFile()
+    val file = Path("/Users/A1113F0/private/dl/Produktliste.xlsx").toFile()
     val sheet = WorkbookFactory.create(file).getSheetAt(0)
     val lines = mutableListOf("code;name;unit;price;")
 
@@ -19,7 +19,7 @@ fun main() {
     }
     lines.removeAt(1)
 
-    val targetFile = Path("../../Downloads/produktliste_transormiert.csv").toFile()
+    val targetFile = Path("/Users/A1113F0/private/dl/produktliste_transormiert.csv").toFile()
     targetFile.writeText(lines.joinToString("\n"))
     println(lines.joinToString("\n"))
 }
